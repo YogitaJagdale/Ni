@@ -1,0 +1,66 @@
+﻿@model SECU_CAMSPlus_DEV.Models.BrandHygieneSite
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+
+@if (TempData["ViewRendered"] != null)
+{
+        
+    <script type="text/javascript">
+        debugger;
+        alert('@TempData["ViewRendered"]');
+    </script>
+}
+
+@*<script type="text/javascript">
+
+    function StartAudio(ClientID, PanelID, TicketID, ActivityID) {
+        debugger;
+        //$("#btnNext").attr("style", "display: block");
+        jQuery.ajax({
+            url: '@Url.Action("StartAudio")',
+            type: 'POST',
+            data: {
+                ClientID: ClientID,
+                PanelID: PanelID,
+                TicketID: TicketID,
+                ActivityID: ActivityID,
+            },
+            error: function (xhr, status) {
+                debugger;
+                alert("Audio verification already in process!");
+            }
+        })
+    };
+
+</script>*@
+
+<body>
+    <div class="clearfix"></div>
+    <div id="partialView">
+
+
+        <div class="modal-body">
+            @if (@Model != null)
+            {
+
+                
+                <div class="col-md-6">
+                   
+
+                </div>
+               
+            }
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>
